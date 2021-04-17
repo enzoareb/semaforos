@@ -27,7 +27,7 @@ Finalmente puedo armar el sándwich con todos los ingredientes.
 
 -----------------------------------------------------------------------
 ### Implementacion
--------------
+
 para simular la competencia entre 4 equipos, se utiliza la implementacion de 4 hilos 
 los cuales se ejecutaran paralelamente siendo el scheduler el encargado de decidir el orden
 de ejecucuion de los mismos. Por otro lado cada equipo tiene una serie de tareas por realizar
@@ -39,7 +39,6 @@ criticas de cada tarea.
 
 ------------
 ### Pseudocodigo
------------
 
 ### funciones:
 ```
@@ -120,7 +119,6 @@ prepararVerduras()
 ```
 -----------------------------------------------
 ### Orden de ejecucion por cada hiloEquipo
------------------------------------------------
 ```                        
 sem_cortar               |   1   |   0    |   0    |   0   |   0   |   0   |   0
 sem_mezclar              |   0   |   1    |   0    |   0   |   0   |   0   |   0
