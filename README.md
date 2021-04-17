@@ -1,5 +1,5 @@
 # SOR-Semáforos-1S-2021
-Trabajo Práctico Semáforos primer semestre año 2021
+##Trabajo Práctico Semáforos primer semestre año 2021
 
 En la cocina de Subway Argento compiten cuatro equipos de cocineros
 para ganarse el puesto de trabajo en el local. ¿Quién será el primero en
@@ -25,7 +25,7 @@ tomate, cebolla morada y pepino recién cortados.
 Finalmente puedo armar el sándwich con todos los ingredientes.
 
 -----------------------------------------------------------------------
-Implementacion
+###Implementacion
 -------------
 para simular la competencia entre 4 equipos, se utiliza la implementacion de 4 hilos 
 los cuales se ejecutaran paralelamente siendo el scheduler el encargado de decidir el orden
@@ -37,10 +37,10 @@ por lo cual se utilizaran semaforos para controlar el acceso de los diferentes h
 criticas de cada tarea.
 
 ------------
-Pseudocodigo
+###Pseudocodigo
 -----------
 
-funciones:
+###funciones:
 ---------
 ejecutarReceta()
 cortar()
@@ -51,7 +51,7 @@ cocinar()
 hornar()
 preparar verduras()
 
-semaforos:
+###semaforos:
 --------
 sem_cortar=1
 sem_mezclar=0
@@ -117,7 +117,7 @@ prepararVerduras()
     V(sem_prepararVerduras)
 
 -----------------------------------------------
-Orden de ejecucion por cada hiloEquipo
+###Orden de ejecucion por cada hiloEquipo
 -----------------------------------------------
                         
 sem_cortar               |   1   |   0    |   0    |   0   |   0   |   0   |   0
