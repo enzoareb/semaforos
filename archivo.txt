@@ -1,0 +1,64 @@
+	Equipo 1 : cortando ajo y perejil 
+	Equipo 2 : horneando 1 pan 
+	Equipo 4 : horneando 1 pan 
+	Equipo 4 : preparando lechuga, tomate, cebolla y pepino 
+	Equipo 2 : cortando ajo y perejil 
+	Equipo 3 : cortando ajo y perejil 
+	Equipo 2 : preparando lechuga, tomate, cebolla y pepino 
+	Equipo 1 : preparando lechuga, tomate, cebolla y pepino 
+	Equipo 3 : preparando lechuga, tomate, cebolla y pepino 
+	Equipo 4 : cortando ajo y perejil 
+	Equipo 1 : ajo y perejil cortados 
+	Equipo 1 : mezclando ajo y perjil con el huevo y la carne 
+	Equipo 4 : verduras preparadas 
+	Equipo 2 : ajo y perejil cortados 
+	Equipo 3 : ajo y perejil cortados 
+	Equipo 2 : mezclando ajo y perjil con el huevo y la carne 
+	Equipo 1 : verduras preparadas 
+	Equipo 2 : verduras preparadas 
+	Equipo 3 : verduras preparadas 
+	Equipo 4 : ajo y perejil cortados 
+	Equipo 3 : mezclando ajo y perjil con el huevo y la carne 
+	Equipo 4 : mezclando ajo y perjil con el huevo y la carne 
+	Equipo 2 : Fin de horneado, retiro 1 pan 
+	Equipo 4 : Fin de horneado, retiro 1 pan 
+	Equipo 1 : horneando 1 pan 
+	Equipo 3 : horneando 1 pan 
+	Equipo 1 : preparacion mezclada 
+	Equipo 1 : salando preparacion 
+	Equipo 2 : preparacion mezclada 
+	Equipo 3 : preparacion mezclada 
+	Equipo 4 : preparacion mezclada 
+	Equipo 1 : Fin de horneado, retiro 1 pan 
+	Equipo 3 : Fin de horneado, retiro 1 pan 
+	Equipo 1 : preparacion salada 
+	Equipo 2 : salando preparacion 
+	Equipo 1 : empanando la carne con pan rallado 
+	Equipo 2 : preparacion salada 
+	Equipo 3 : salando preparacion 
+	Equipo 2 : empanando la carne con pan rallado 
+	Equipo 3 : preparacion salada 
+	Equipo 4 : salando preparacion 
+	Equipo 3 : empanando la carne con pan rallado 
+	Equipo 1 : milanesa empanada 
+	Equipo 1 : cocinando milanesa 
+	Equipo 4 : preparacion salada 
+	Equipo 4 : empanando la carne con pan rallado 
+	Equipo 2 : milanesa empanada 
+	Equipo 3 : milanesa empanada 
+	Equipo 4 : milanesa empanada 
+	Equipo 1 : milanesa cocinada 
+	Equipo 2 : cocinando milanesa 
+	Equipo 1 : Armando sandwich
+	Sandwich Listo! el equipo 1 es el ganador!! 
+	Equipo 2 : milanesa cocinada 
+	Equipo 3 : cocinando milanesa 
+	Equipo 2 : Armando sandwich
+	Sandwich Listo! el equipo 2 ha terminado en posicion numero 2 
+	Equipo 3 : milanesa cocinada 
+	Equipo 4 : cocinando milanesa 
+	Equipo 3 : Armando sandwich
+	Sandwich Listo! el equipo 3 ha terminado en posicion numero 3 
+	Equipo 4 : milanesa cocinada 
+	Equipo 4 : Armando sandwich
+	Sandwich Listo! el equipo 4 ha terminado en posicion numero 4 
