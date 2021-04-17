@@ -1,5 +1,6 @@
 # SOR-Semáforos-1S-2021
 ## Trabajo Práctico Semáforos primer semestre año 2021
+
 ***
 En la cocina de Subway Argento compiten cuatro equipos de cocineros
 para ganarse el puesto de trabajo en el local. ¿Quién será el primero en
@@ -23,6 +24,7 @@ horneados (por 10’ aproximadamente) junto a lechuga fresca,
 tomate, cebolla morada y pepino recién cortados.
 Finalmente puedo armar el sándwich con todos los ingredientes.
 ***
+
 -----------------------------------------------------------------------
 ### Implementacion
 -------------
@@ -51,7 +53,7 @@ hornar()
 preparar verduras()
 ```
 ### semaforos:
---------
+```
 sem_cortar=1
 sem_mezclar=0
 sem_salar=0
@@ -61,7 +63,8 @@ sem_cocinar=0
 sem_cocinarAux=1
 sem_hornearAux=2
 sem_prepararVerduras=1
-
+```
+```
 main()
     hiloEquipo1(ejecutarReceta())
     hiloEquipo2(ejecutarReceta())
@@ -114,11 +117,11 @@ prepararVerduras()
     p(sem_prepararVerduras)
     //codigo
     V(sem_prepararVerduras)
-
+```
 -----------------------------------------------
 ### Orden de ejecucion por cada hiloEquipo
 -----------------------------------------------
-                        
+```                        
 sem_cortar               |   1   |   0    |   0    |   0   |   0   |   0   |   0
 sem_mezclar              |   0   |   1    |   0    |   0   |   0   |   0   |   0
 sem_salar                |   0   |   0    |   1    |   0   |   0   |   0   |   0
@@ -131,7 +134,7 @@ sem_prepararVerduras     |   1   |   0    |   0    |   0   |   0   |   0   |   0
                                   cortar  | mezclar| salar |empanar|cocinar
                                   prepVerd|
                                   hornear |
-
+```
 Tras este analisis podemos evaluar, con los semaforos declarados, cual es el orden de ejecucuion de cada hiloEquipo.
 Generamos que tareas que dependan de la terminacion de otras no se ejecuten simultaneamente.
 Por otro lado los semaforos con terminacion aux permiten que varios hilosEquipos NO accedan al mismo tiempo a la 
