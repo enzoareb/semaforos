@@ -12,7 +12,6 @@ solo tienen un sartén para todos los equipos y este cocina una milanesa
 a la vez, existe solo un horno que cocina dos panes a la vez y un solo
 salero.
 
----------------------------------------------------------------------
 ¿Cómo se arma un sándwich de milanesa?
 Para armar un sándwich necesito cortar 2 dientes de ajo y
 un puñado de perejil, para luego mezclarlos con 1 huevo.
