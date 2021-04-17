@@ -1,5 +1,5 @@
 # SOR-Semáforos-1S-2021
-##Trabajo Práctico Semáforos primer semestre año 2021
+#Trabajo Práctico Semáforos primer semestre año 2021
 
 En la cocina de Subway Argento compiten cuatro equipos de cocineros
 para ganarse el puesto de trabajo en el local. ¿Quién será el primero en
