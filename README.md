@@ -40,7 +40,7 @@ criticas de cada tarea.
 -----------
 
 ### funciones:
----------
+```
 ejecutarReceta()
 cortar()
 mezclar()
@@ -49,7 +49,7 @@ empanar()
 cocinar()
 hornar()
 preparar verduras()
-
+```
 ### semaforos:
 --------
 sem_cortar=1
