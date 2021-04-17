@@ -25,7 +25,7 @@ tomate, cebolla morada y pepino recién cortados.
 Finalmente puedo armar el sándwich con todos los ingredientes.
 
 -----------------------------------------------------------------------
-###Implementacion
+### Implementacion
 -------------
 para simular la competencia entre 4 equipos, se utiliza la implementacion de 4 hilos 
 los cuales se ejecutaran paralelamente siendo el scheduler el encargado de decidir el orden
