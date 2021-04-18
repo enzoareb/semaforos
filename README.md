@@ -140,13 +140,16 @@ seccion critica de las funciones salar, hornear y cocinar, ya que en terminos de
 solo se cuenta con un salero, una sarten y se puede hornear hasta dos panes en el desarrollo de la competencia.
 
 -----------------------------------------------------------------------------------------------------------------------------
-Dificultades encontradas:
-Dentro de las dificultades podemos destacar que en las consignas se debia leer un archivo con la receta de la competencia
-para luego interactuar con la misma durante el programa. El hecho de leer un archivo no presento mayores dificultades, 
-sino realizar el algoritmo adecuado para incorporar los datos dentro de una matriz.
+
+### Consideraciones:
+El archivo receta.txt no contiene datos como una receta tadicional, sino la descripcion de actos ha realizar.
+Este cambio de hizo para generar durante la ejecucion del programa la simulacion de la competencia de una forma tal 
+que se imprima las acciones que estan realizando los diferentes equipos y la finalizacion de los mismas.
 
 -----------------------------------------------------------------------------------------------------------------------------
-
+### comandos
+Para compilar:  gcc subwayArgento.c -o ejecutable -lpthread
+Para ejecutar:   ./ejecutable
 
 
 
