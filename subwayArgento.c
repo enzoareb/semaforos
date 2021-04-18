@@ -45,7 +45,6 @@ void* imprimirAccion(void *data, char *accionIn) {
 		//pregunto si la accion del array es igual a la pasada por parametro (si es igual la funcion strcmp devuelve cero)
 		if(strcmp(mydata->pasos_param[i].accion, accionIn) == 0){
 			fprintf(fichero,"\tEquipo %d : %s \n",mydata->equipo_param,mydata->pasos_param[i].ingredientes[0]);
-			printf("\tEquipo %d : %s \n",mydata->equipo_param,mydata->pasos_param[i].ingredientes[0]);
 		}
 	}
 	fclose(fichero);
@@ -59,7 +58,6 @@ void* imprimirFInalAccion(void *data, char *accionIn) {
 	for(i = 0; i < sizeArray; i ++){
 		if(strcmp(mydata->pasos_param[i].accion, accionIn) == 0){
 			fprintf(fichero,"\tEquipo %d : %s \n",mydata->equipo_param,mydata->pasos_param[i].ingredientes[1]);
-			printf("\tEquipo %d : %s \n",mydata->equipo_param,mydata->pasos_param[i].ingredientes[1]);
 		}
 	}
 	fclose(fichero);
@@ -195,60 +193,37 @@ void* ejecutarReceta(void *i) {
 	pthread_data->equipo_param = p;
 	
 	//seteo semaforos
-    pthread_data->semaforos_param.sem_cortar = sem_cortar;
+        pthread_data->semaforos_param.sem_cortar = sem_cortar;
 	pthread_data->semaforos_param.sem_mezclar = sem_mezclar;
 	pthread_data->semaforos_param.sem_salar = sem_salar;
 	pthread_data->semaforos_param.sem_empanar = sem_empanar;
 	pthread_data->semaforos_param.sem_cocinar = sem_cocinar;
 	pthread_data->semaforos_param.sem_preparandoVerduras = sem_preparandoVerduras;
 
-
-	//******* algoritmo de lectura de receta sin terminar********
-	FILE *archi;
-	archi=fopen("receta.txt","r");
-	char cadena[100];
-	int h=0;
-	int j=0;
-	while(fgets(cadena,100,archi)!=NULL){
-		char *token=strtok(cadena,";");
-		//strcpy(pthread_data->pasos_param[k].ingredientes[0],token);
-		while(token!=NULL){
-		//	strcpy(pthread_data->pasos_param[k].ingredientes[1],token);
-		token=strtok(NULL,";");
-			j++;
+	FILE *receta;
+	receta = fopen ("receta.txt", "r");
+	char cadena [200];
+	char *token;
+	int j = 0;
+	//Leo una linea de la receta
+	while (fgets(cadena, 150, receta)) {
+		int k = 0;
+		//separa la cadena por el simbolo |
+		token = strtok(cadena , "|");
+		//se guarda el primer dato en accion
+		strcpy(pthread_data->pasos_param[j].accion, token);
+		//Recorro el resto de la cadena
+		while (token != NULL) {
+			token = strtok(NULL , "|");
+			//chequeo cuando termina la cadena
+			if (token != NULL){
+				//Copia ingredientes en la variable correspondiente
+				strcpy(pthread_data->pasos_param[j].ingredientes[k], token);
+				k ++;
+			}
 		}
-		h++;
+		j++;
 	}
-
-	//seteo las acciones y los ingredientes
-    strcpy(pthread_data->pasos_param[0].accion, "cortar");
-	strcpy(pthread_data->pasos_param[0].ingredientes[0], "cortando ajo y perejil");
-	strcpy(pthread_data->pasos_param[0].ingredientes[1], "ajo y perejil cortados");
-
-	strcpy(pthread_data->pasos_param[1].accion, "mezclar");
-	strcpy(pthread_data->pasos_param[1].ingredientes[0], "mezclando ajo y perjil con el huevo y la carne");
-	strcpy(pthread_data->pasos_param[1].ingredientes[1], "preparacion mezclada");
-    
-    strcpy(pthread_data->pasos_param[2].accion, "salar");
-	strcpy(pthread_data->pasos_param[2].ingredientes[0], "salando preparacion");
-	strcpy(pthread_data->pasos_param[2].ingredientes[1], "preparacion salada");
-
-    strcpy(pthread_data->pasos_param[3].accion, "empanar");
-	strcpy(pthread_data->pasos_param[3].ingredientes[0], "empanando la carne con pan rallado");
-	strcpy(pthread_data->pasos_param[3].ingredientes[1], "milanesa empanada");
-    
-    strcpy(pthread_data->pasos_param[4].accion, "cocinar");
-	strcpy(pthread_data->pasos_param[4].ingredientes[0], "cocinando milanesa");
-	strcpy(pthread_data->pasos_param[4].ingredientes[1], "milanesa cocinada");
-	
-	strcpy(pthread_data->pasos_param[5].accion, "hornear");
-	strcpy(pthread_data->pasos_param[5].ingredientes[0], "horneando 1 pan");
-	strcpy(pthread_data->pasos_param[5].ingredientes[1], "Fin de horneado, retiro 1 pan");
-
-	strcpy(pthread_data->pasos_param[6].accion, "preparando verduras");
-	strcpy(pthread_data->pasos_param[6].ingredientes[0], "preparando lechuga, tomate, cebolla y pepino");
-	strcpy(pthread_data->pasos_param[6].ingredientes[1], "verduras preparadas");
-
 	
 	//inicializo los semaforos
     sem_init(&(pthread_data->semaforos_param.sem_cortar),0,1);
@@ -284,7 +259,6 @@ void* ejecutarReceta(void *i) {
 	//abro archivo para escritura
 	FILE* fichero = fopen("archivo.txt", "at");
 	fprintf(fichero,"\tEquipo %d : Armando sandwich\n",p);
-	printf("\tEquipo %d : Armando sandwich\n",p);
 
 	//uso sleep para simular que que pasa tiempo
 	usleep( 3000000 );
@@ -292,10 +266,8 @@ void* ejecutarReceta(void *i) {
 	sem_wait(&sem_ganador);
 		if (posicion==1){	
 			fprintf(fichero,"\tSandwich Listo! el equipo %d es el ganador!! \n",p);
-			printf("\tSandwich Listo! el equipo %d es el ganador!! \n",p);
 		}else{
 			fprintf(fichero,"\tSandwich Listo! el equipo %d ha terminado en posicion numero %d \n",p,posicion);
-			printf("\tSandwich Listo! el equipo %d ha terminado en posicion numero %d \n",p,posicion);
 		}
 		posicion++;
 	sem_post(&sem_ganador);
