@@ -148,8 +148,9 @@ que se imprima las acciones que estan realizando los diferentes equipos y la fin
 
 -----------------------------------------------------------------------------------------------------------------------------
 ### comandos
+```
 Para compilar:  gcc subwayArgento.c -o ejecutable -lpthread
 Para ejecutar:   ./ejecutable
-
+```
 
 
