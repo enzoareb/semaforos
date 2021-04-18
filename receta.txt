@@ -1,7 +1,7 @@
-cortar;cortando ajo y perejil;ajo y perejil cortados;
-mezclar;mezclando ajo, perejil y huevo;preparacion mezclada;
-salar;salando preparacion;	preparacion salada;
-empanar;empanando la carne con pan rallado;milanesa empanada;
-milanesa cocinada;cocinar;cocinando milanesa;
-hornear;horneando 1 pan;Fin de horneado, retiro 1 pan;
-preparando verduras;cortando lechuga, tomate, cebolla morada y pepino;verduras preparadas
+cortar|cortando ajo y perejil|ajo y perejil cortados|
+mezclar|mezclando ajo, perejil con el huevo y la carne|preparacion mezclada|
+salar|salando preparacion|preparacion salada|
+empanar|empanando la carne con pan rallado|milanesa empanada|
+cocinar|cocinando milanesa|milanesa cocinada|
+hornear|horneando 1 pan|Fin de horneado, retiro 1 pan|
+preparando verduras|cortando lechuga, tomate, cebolla y pepino|verduras preparadas|
